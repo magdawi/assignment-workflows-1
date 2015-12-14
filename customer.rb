@@ -33,7 +33,7 @@ class Customer
   end
   def amount_for(rental)
   	result = 0
-	case element.movie.price_code
+	case rental.movie.price_code
 	when Movie::REGULAR
 	  result += 2
 	  result += (rental.days_rented - 2) * 1.5 if rental.days_rented > 2
